@@ -40,8 +40,8 @@ resource "aws_security_group_rule" "blog_https_in" {
   type         = "ingress"
   from_port    = 443
   to_port      = 443
-  protopol     = "tcp"
-  cider_blocks = ["169.254.188.234"]
+  protocol     = "tcp"
+  cidr_block = ["169.254.188.234"]
 
   security_group_id = aws_security_group.blog.id
 }
@@ -50,8 +50,8 @@ resource "aws_security_group_rule" "blog_everything_out" {
   type         = "engress"
   from_port    = 0
   to_port      = 0
-  protopol     = "-1"
-  cider_blocks = ["169.254.188.234"]
+  protocol     = "-1"
+  cidt_block = ["169.254.188.234"]
 
   security_group_id = aws_security_group.blog.id
 }
@@ -60,8 +60,8 @@ resource "aws_security_group_rule" "blog_http_in" {
   type         = "ingress"
   from_port    = 80
   to_port      = 80
-  protopol     = "tcp"
-  cider_blocks = ["169.254.188.234"]
+  protocol     = "tcp"
+  cidr_block = ["169.254.188.234"]
 
   security_group_id = aws_security_group.blog.id
 }
